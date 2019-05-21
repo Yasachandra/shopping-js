@@ -8,8 +8,9 @@ The project in this repository (coded in pure JS only) showcases a shopping appl
 # Usage
 Clone the project & open CMD/Termminal in the cloned directory and give commands:
 
-npm install 
-npm start 
+npm install
+npm start
+
 Open http://localhost:8080 in browser
 
 It uses webpack-dev server to refresh the app automatically whenever we make some changes to it's code.
