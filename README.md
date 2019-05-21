@@ -9,6 +9,7 @@ The project in this repository (coded in pure JS only) showcases a shopping appl
 Clone the project & open CMD/Termminal in the cloned directory and give commands:
 
 npm install
+
 npm start
 
 Open http://localhost:8080 in browser
