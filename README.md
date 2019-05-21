@@ -3,9 +3,10 @@
 The project in this repository (coded in pure JS only) showcases a shopping application having various recipes with following functionalities:
 1. Making Http requests to https://www.food2fork.com/about/api to get recipe data based on the item entered by the user/.
 2. Move between the list of recipes returned from the API using pagination.
+3. Select a recipe and look at it's detailed view.
 
 # Usage
-Clone the project & open CMD/Termminal in the cloned directory
+Clone the project & open CMD/Termminal in the cloned directory and give commands:
 npm install 
 npm start 
 Open http://localhost:8080 in browser
