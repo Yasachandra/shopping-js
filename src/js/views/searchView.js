@@ -17,19 +17,6 @@ const renderRecipe = recipe => {
     elements.searchResList.insertAdjacentHTML('beforeend',markup);
 }
 
-const limitRecipeTitle = (title,limit=17) => {
-    if(title.length > limit) {
-        const newTitle = [];
-        title.split(' ').reduce((acc, cur)=>{
-            if(acc + cur.length <= limit)
-                newTitle.push(cur);
-            return acc + cur.length;
-        },0);
-        return `${newTitle.join(' ')} ...`;
-    }
-    return title;
-}
-
 const createButton = (page,type) => `
     <button class="btn-inline results__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
         <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
@@ -55,12 +42,25 @@ const renderButtons = (page, numResults, resPerPage) => {
     elements.searchResPages.insertAdjacentHTML('afterbegin',button);
 }
 
+export const limitRecipeTitle = (title,limit=17) => {
+    if(title.length > limit) {
+        const newTitle = [];
+        title.split(' ').reduce((acc, cur)=>{
+            if(acc + cur.length <= limit)
+                newTitle.push(cur);
+            return acc + cur.length;
+        },0);
+        return `${newTitle.join(' ')} ...`;
+    }
+    return title;
+}
+
 export const highlightSelected = id => {
     const resultsArr = Array.from(document.querySelectorAll('.results__link'));
     resultsArr.forEach(el => {
         el.classList.remove('results__link--active');
     });
-    document.querySelector(`a[href*="${id}"]`).classList.add('results__link--active');
+    document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
 }
 
 export const getInput = () => elements.searchInput.value;
