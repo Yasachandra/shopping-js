@@ -17,3 +17,5 @@ Open http://localhost:8080 in browser
 
 It uses webpack-dev server to refresh the app automatically whenever we make some changes to it's code.
 The project follows the MVC style design pattern.
+
+If there are any errors during API requests then it means that the limit on the number of API requests for the particular key has been reached. To resolve this, register at https://www.food2fork.com and then find your API key in the dashboard at https://www.food2fork.com/about/api and then copy it inside "key" variable inside config.js file inside "src/js" folder
